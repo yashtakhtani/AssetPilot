@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AssetPilot-Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="dash-body">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">AssetPilot</div>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="report.html">Report</a>
+                <a href="home.html#about-section" class="about-link">About</a>
+                <button class="signbtn" onclick="window.location.href='signin.html';"><p>Sign in</p></button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container dash">
+    <div class="dash-main">
+        <h1 class="title dash-title">Your Dashboard</h1>
+        <div class="glow-line"></div>
+        <div class="flashcard">
+            <div class="main-card">
+                <div class="card">
+                <img src="images/deal.png" alt="lent-img" class="dash-img">
+                <span class="main-data" id="total-lent">3000</span>
+                </div>
+                <h3>Total Lent</h3>
+            </div>
+
+            <div class="main-card">
+                <div class="card">
+                <img src="images/borrow.png" alt="borrow-img" class="dash-img">
+                <span class="main-data" id="total-borrowed">1500</span>
+                </div>
+                <h3>Total Borrowed</h3>
+            </div>
+
+            <div class="main-card">
+                <div class="card">
+                <img src="images/time-left.png" alt="pending-img" class="dash-img">
+                <span class="main-data" id="pending-returns">500</span>
+                </div>
+                <h3>Pending Returns</h3>
+            </div>
+        </div>
+
+                <!-- Transaction Section -->
+        <div class="dash-info">
+            <section class="transactions">
+                <div id="transactionContainer">
+            <div class="transaction borrowed">
+                <span class="dot red"></span>
+                <span class="amount">₹1700 - <b>Silver</b></span>
+                <span class="detail">Borrowed from Yash</span>
+                <span class="due">Due 2025-10-24 <small>70 days left</small></span>
+            </div>
+
+            <div class="transaction lent">
+
+                <span class="dot green"></span>
+                <span class="amount">₹2500 - <b>utility</b></span>
+                <span class="detail">Lent to Rucha</span>
+                <span class="due">Due 2025-10-24 <small>70 days left</small></span>
+            </div>
+
+            <div class="transaction borrowed">
+                <span class="dot red"></span>
+                <span class="amount">₹500 - <b>cash</b></span>
+                <span class="detail">Borrowed from Aditya</span>
+                <span class="due">Due 2025-10-24 <small>70 days left</small></span>
+            </div>
+        </div>
+            <button class="view-more">View More</button>
+            
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-stats">
+    <div class="stats-main">
+        <h1 class="stats-title">Your Statistics</h1>
+        <div class="stats-flashcard">
+            <div class="main-card main-stat-card1">
+                <div class="stat-card">
+                <h3>Total Assets Lent so far</h3>
+                <span class="main-data lent-data" id="stats-total-lent">Rs 0</span>
+                </div>
+            </div>
+
+            <div class="main-card main-stat-card2">
+                <div class="stat-card">
+                <h3>Total Assets Borrowed so far</h3>
+                <span class="main-data borrow-data" id="stats-total-borrowed">Rs 0</span>
+                </div>
+            </div>
+
+            <div class="main-card main-stat-card3">
+                <div class="stat-card">
+                <h3>Total Transactions so far</h3>
+                <span class="main-data trans-data" id="stats-total-trans">0</span>
+                </div>
+            </div>
+
+            <div class="charts">
+        <div class="charts-cards">
+            <div class="chart">
+                <h3 class="lent-head">Lent Asset Distributor</h3>
+                <canvas id="statsPieChart"></canvas>
+            </div>
+            <div class="chart">
+                <h3 class="amount-head">Outstanding v/s Settled Amounts</h3>
+                <canvas id="amtSemiDonutChart"></canvas>
+            </div>
+            <div class="chart">
+                <h3 class="borrow-head">Borrowed Asset Type Distribution</h3>
+                <canvas id="borrowDonutChart"></canvas>
+            </div>
+        </div>
+    </div>
+            <!--Chart pie chart lent asset type distribution-->
+        </div>
+    </div>
+
+<!-- DYNAMIC CALENDAR SECTION -->
+<div class="calendar-container">
+  <div class="calendar">
+    <div class="calendar-header">
+      <!-- Navigation buttons will be added dynamically -->
+    </div>
+    
+    <div class="calendar-body">
+      <div class="calendar-weekdays">
+        <div>S</div>
+        <div>M</div>
+        <div>T</div>
+        <div>W</div>
+        <div>T</div>
+        <div>F</div>
+        <div>S</div>
+      </div>
+      
+      <div class="calendar-days">
+        <!-- Days will be dynamically generated by JavaScript -->
+      </div>
+    </div>
+    
+    <div class="calendar-footer">
+      <div class="legend-item">
+        <span class="dot red"></span>
+        <span>Deadline To Repay</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot green"></span>
+        <span>Deadline To Request Repayment</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Dashboard</a></li>
+                    <li><a href="#" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">Account</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Twitter</a></li>
+                    <li><a href="#" class="footer-links">Instagram</a></li>
+                    <li><a href="#" class="footer-links">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Email</a></li>
+                    <li><a href="#" class="footer-links">Phone no.</a></li>
+                    <li><a href="#" class="footer-links">Inquiries</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Asset Pilot. All rights reserved.</p>
+        </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="charts.js" defer></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Dashboard</a></li>
+                    <li><a href="#" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">Account</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Twitter</a></li>
+                    <li><a href="#" class="footer-links">Instagram</a></li>
+                    <li><a href="#" class="footer-links">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Email</a></li>
+                    <li><a href="#" class="footer-links">Phone no.</a></li>
+                    <li><a href="#" class="footer-links">Inquiries</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Asset Pilot. All rights reserved.</p>
+        </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="charts.js" defer></script>
+<script src="script.js"></script>
+</body>
+</html>

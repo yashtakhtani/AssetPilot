@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AssetPilot</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">AssetPilot</div>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="report.html">Report</a>
+                <a href="home.html#about-section" class="about-link">About</a>
+
+                <button class="signbtn" onclick="window.location.href='signin.html';"><p>Sign in</p></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-flex">
+             <div class="hero-left">
+                <h1 class="title hero-title">Money Moves<br>Made Easy</h1>
+                <p class="hero-sub-title">
+                Make it easy to track all the Assets you owe them or all the Assets they owe you with your finance buddy, AssetPilot!
+                </p>
+                <button onclick="window.location.href='dashboard.html'" class="cta-button">Visit Your Dashboard</button>
+             </div>
+
+            <div class="grid-2">
+                <button class="hero-card card1" id="borrowBtn"><h3>Borrow</h3></button>
+                <button class="hero-card card2" id="lendBtn"><h3>Lend</h3></button>
+                <button class="hero-card card3" id="statsBtn"><h3>View Stats</h3></button>
+                <button class="hero-card card4" id="historyBtn"><h3>History</h3></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container about">
+        <h1 class="title about-title">What is AssetPilot?</h1>
+        <div class="info-about">
+            <p>AssetPilot is a smart tool to track everything you borrow or lend
+                cash, gold, silver, or utilities. Stay organized, get performance
+                ratings, and manage your asset exchanges with ease</p>
+        </div>
+        <div class="icons">
+            <figure>
+                <img class="icon" src="images/line-chart.png" 
+                data-static="images/line-chart.png" 
+                data-gif="images/line-chart.gif" alt="Line Chart" width="130" title="Asset Tracking">
+                <figcaption>Asset Tracking</figcaption>
+                <p class="img-des">Track all assets,
+                not just money</p>
+            </figure>
+            
+            <figure>
+                <img src="images/calendar.png" class="icon" 
+                data-static="images/calendar.png"
+                data-gif="images/calendar.gif" alt="Calendar" width="130" title="Smart Calender">
+                <figcaption>Smart Calendar</figcaption>
+                <p class="img-des">View due dates at
+                a glance</p>
+            </figure>
+            
+            <figure>
+                <img src="images/hourglass.png" class="icon" 
+                data-static="images/hourglass.png"
+                data-gif="images/hourglass.gif" alt="Hourglass" width="130" title="History Log">
+                <figcaption>History Log</figcaption>
+                <p class="img-des">Access all past
+                transactions easily</p>
+            </figure>
+            
+            <figure>
+                <img src="images/evolution.png" class="icon" 
+                data-static="images/evolution.png"
+                data-gif="images/evolution.gif" alt="Evolution Chart" width="130" title="Performance Statistics">
+                <figcaption>Performance Statistics</figcaption>
+                <p class="img-des">See how you manage
+                your assets</p>
+            </figure>
+            
+        </div>
+        
+    </section>
+    <section class='mobile-app'>
+        <h1 class="title mobile-app-title">We even got our smart phone page as well!</h1>
+        <div class="mobile-app-box">
+            <img src="images/handphone.png" alt="Mobile App" width="300"/>
+        </div>
+    </section>
+    <!-- FEATURE SECTION -->
+    <section class="features" id="about-section">
+        <div class="container">
+            <h2 class="tutorial-heading">How to use AssetPilot</h2>
+
+            <div class="carousel-container">
+                <button class="nav-arrow" id="prevBtn">‹</button>
+
+            <div class="mockup-container">
+                <img
+                src="https://png.pngtree.com/png-clipart/20230222/ourmid/pngtree-macbook-pro-16-png-image_6614408.png"
+                alt="MacBook Mockup"
+                class="mockup-image"
+                />
+                <div class="mockup-screen">
+                    <div class="screenshots-container" id="screenshotsContainer">
+                        <div class="screenshot">
+                        <img src="images/screenshot1.png" alt="screenshot 1" />
+                        </div>
+                        <div class="screenshot">
+                        <img src="images/screenshot2.png" alt="screenshot 2" />
+                        </div>
+                        <div class="screenshot">
+                        <img src="images/screenshot3.png" alt="screenshot 3" />
+                        </div>
+                        <div class="screenshot">
+                        <img src="images/screenshot4.png" alt="screenshot 4" />
+                        </div>
+                        <div class="screenshot">
+                        <img src="images/screenshot5.png" alt="screenshot 5" />
+                        </div>
+                        <div class="screenshot">
+                        <img src="images/screenshot6.png" alt="screenshot 6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-arrow" id="nextBtn">›</button>
+            </div>
+
+            <div class="dots-indicator" id="dotsIndicator">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+            </div>
+            <div class="tutorial-steps">
+                <h3 class="step1">#1 Sign up and Set up your account</h3>
+                <h3 class="step2">#2 Record your Borrowed and Lent Assets</h3>
+                <h3 class="step3">#3 View your Dashboard to Stay Up to Date</h3>
+                <h3 class="step4">#4 Collect Badges On Hitting Milestones</h3>
+                <h3 class="step5">#5 Analyse your Data with Graphs</h3>   
+                <h3 class="step6">#6 Stay Organized with Smart Calendar</h3>    
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Dashboard</a></li>
+                    <li><a href="#" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">Account</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Twitter</a></li>
+                    <li><a href="#" class="footer-links">Instagram</a></li>
+                    <li><a href="#" class="footer-links">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Email</a></li>
+                    <li><a href="#" class="footer-links">Phone no.</a></li>
+                    <li><a href="#" class="footer-links">Inquiries</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Asset Pilot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="modalOverlay" class="overlay">
+    <div class="borrow">
+        <h1 class="borrow-heading">Record <span class="borrowed-title">Borrowed</span> Assets 
+            <span class="close-wrap"><button class="closeModal">X</button></span>
+        </h1>
+        
+        <form id="borrowForm">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="assetType">Asset Type</label>
+                    <select class="assetType" name="assetType"  required >
+                        <option value="Utility">Utility</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Loan">Loan</option>
+                    </select>
+                </div>
+                
+                <div class="field"> 
+                    <label for="amount-borrow">Amount</label>
+                    <input type="text" class="amount-borrow" name="amount" required />
+                </div>
+                <div class="field">
+                    <label for="borrowedFrom">Borrowed From</label>
+                    <input type="text" class="borrowedFrom" name="borrowedFrom" required />
+                </div>
+                <div class="field">
+                    <label for="deadline">Deadline:</label>
+                    <input type="date" class="deadline" name="deadline" required />
+                </div>
+                
+                <div class="field">
+                    <label for="interest">Interest Rate</label>
+                    <input type="text" class="interest" name="interest" required />
+                </div>
+                <div class="field">
+                    <label for="category">Category</label>
+                    <select class="category" name="category"  required >
+                        <option value="emergency">Emergency</option>
+                        <option value="personal">Personal</option>
+                        <option value="investment">Investment</option>
+                        <option value="Loan">Loan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field note">
+                <label for="addNote">Add a Note</label>
+                <input type="text" class="addNote" name="addNote" placeholder="comment..."/>
+            </div>
+            
+            <div class="submit">
+                <button class="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="lend">
+        <h1 class="lend-heading">Record <span class="lend-title">Lent</span> Asset
+            <span class="close-wrap"><button class="closeModal">X</button></span>
+        </h1>
+        
+        <form id="lendForm">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="assetType">Asset Type</label>
+                    <select class="assetType" name="assetType"  required >
+                        <option value="Utility">Utility</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Loan">Loan</option>
+                    </select>
+                </div>
+                
+                <div class="field"> 
+                    <label for="amount-lend">Amount</label>
+                    <input type="text" class="amount-lend" name="amount" required />
+                </div>
+                <div class="field">
+                    <label for="LendTo">Lent to</label>
+                    <input type="text" class="LentTo" name="LentTo" required />
+                </div>
+                <div class="field">
+                    <label for="deadline">Deadline:</label>
+                    <input type="date" class="deadline" name="deadline" required />
+                </div>
+                
+                <div class="field">
+                    <label for="interest">Interest Rate</label>
+                    <input type="text" class="interest" name="interest" required />
+                </div>
+                <div class="field">
+                    <label for="category">Category</label>
+                    <select id="category" name="category"  required >
+                        <option value="emergency">Emergency</option>
+                        <option value="personal">Personal</option>
+                        <option value="investment">Investment</option>
+                        <option value="loan">Loan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field note">
+                <label for="addNote">Add a Note</label>
+                <input type="text" class="addNote" name="addNote" placeholder="comment..."/>
+            </div>
+            
+            <div class="submit">
+                <button class="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <section class="history-section">
+        <h2>Your <span class="highlight">History</span>
+            <!-- This close button is important for functionality -->
+            <span class="history-controls">
+      <button id="clearHistoryBtn" title="Clear History" class="trash-btn">🗑️</button>
+      <button class="closeModal">✖</button>
+    </span>
+        </h2>
+        <div id="history-cards-container">
+        <div class="history-card active">
+            <span class="status-dot red"></span>
+            <div class="history-details">
+              <h3>Borrowed from Yash on 2025-07-23</h3>
+              <p>Amount: ₹1700 | Category: Gold</p>
+              <p>Deadline on: 2025-08-26 | Repaid on: Not returned yet</p>
+            </div>
+            <span class="status-label gold">Active</span>
+        </div>
+
+        <div class="history-card late">
+            <span class="status-dot red"></span>
+            <div class="history-details">
+              <h3>Borrowed from Shriya on 2025-05-16</h3>
+              <p>Amount: ₹900 | Category: Cash</p>
+              <p>Deadline on: 2025-06-11 | Repaid on: 2025-06-16</p>
+            </div>
+            <span class="status-label red-bg">5 days late</span>
+        </div>
+
+        <div class="history-card early">
+            <span class="status-dot green"></span>
+            <div class="history-details">
+              <h3>Lent to Shriya on 2024-12-09</h3>
+              <p>Amount: ₹15000 | Category: Utility</p>
+              <p>Deadline on: 2025-01-08 | Received on: 2025-01-05</p>
+            </div>
+            <span class="status-label green-bg">3 days early</span>
+        </div>
+        </div>
+    </section>
+
+    <!-- View Stats Modal -->
+<div class="view-stats">
+  <h1 class="stats-heading">Your <span class="highlight">Stats</span>
+    <span class="close-wrap"><button class="closeModal">X</button></span>
+  </h1>
+
+  <div class="stats-grid">
+    <div class="stat-item"><h3>Total Lent</h3><p id="stat-total-lent">₹0</p></div>
+    <div class="stat-item"><h3>Total Borrowed</h3><p id="stat-total-borrowed">₹0</p></div>
+    <div class="stat-item"><h3>Active Transactions</h3><p id="stat-active">0</p></div>
+    <div class="stat-item"><h3>Returned On Time</h3><p id="stat-on-time">0</p></div>
+    <div class="stat-item"><h3>Returned Late</h3><p id="stat-late">0</p></div>
+    <div class="stat-item"><h3>Returned Early</h3><p id="stat-early">0</p></div>
+  </div>
+</div>
+
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

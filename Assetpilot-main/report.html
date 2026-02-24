@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AssetPilot-Report</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="report-body">
+     <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">AssetPilot</div>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#">Report</a>"
+                <a href="home.html#about-section" class="about-link">About</a>
+                <button class="signbtn" onclick="window.location.href='signin.html';"><p>Sign in</p></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="performance">
+        <h1 class="report-title">Your Performance Report</h1>
+        <div class="Trust-score-container">
+            <div class="trust-score-block block1">
+  <p class="trust-score-data">Total On-Time Repayments</p>
+  <p class="trust-score-data data1" id="on-time-count">0</p>
+  <p class="trust-score-data">Total Early Repayments</p>
+  <p class="trust-score-data data2" id="early-count">0</p>
+  <p class="trust-score-data">Total Late Repayments</p>
+  <p class="trust-score-data data3" id="late-count">0</p>
+</div>
+
+<div class="trust-score-block block2">
+  <p class="trust-score-heading">Your Trust Score is</p>
+  <p class="trust-score-data score" id="trust-score">0</p>
+  <p class="trust-score-extra">Based on your repayment history</p>
+</div>
+        </div>
+    </section>
+    <!-- -------------------------------MILESTONE SECTION 2---------------------------------------------------- -->
+    <section class="milestones-section type2">
+        <h1>Milestones Badges</h1>
+        
+        <div class="carousel-container type2">
+            
+            <!-- Milestones Container -->
+            <div class="milestones-wrapper2">
+                <div class="milestones-container2" id="milestonesContainer2">
+                    <div class="milestone-card2">
+                        <img src="images/milestone1.png" alt="Milestone 1">
+                        <h3>Streak Master</h3>
+                        <p>10 on-time repayments in a row</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone2.png" alt="Milestone 2">
+                        <h3>Debt Slayer</h3>
+                        <p>Cleared all debts in a single month</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone3.png" alt="Milestone 3">
+                        <h3>Trust Badge</h3>
+                        <p>Kept 100% on-time repayment for 6 months</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone4.png" alt="Milestone 4">
+                        <h3>Asset Whale</h3>
+                        <p>Managed total asset of ₹1,00,000</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone5.png" alt="Milestone 5">
+                        <h3>diversified Pro</h3>
+                        <p>Lent or Borrowed with all asset categories</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone6.png" alt="Milestone 6">
+                        <h3>Zero Debt</h3>
+                        <p>No outstanding debts for 30+ days</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone8.png" alt="Milestone 7">
+                        <h3>Deal Maker</h3>
+                        <p>Completed 50+ transaction</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone7.png" alt="Milestone 8">
+                        <h3>Time Keeper</h3>
+                        <p>Never missed a due date for 3 months</p>
+                    </div>
+                    
+                    <div class="milestone-card2">
+                        <img src="images/milestone9.png" alt="Milestone 9">
+                        <h3>Bounce Back</h3>
+                        <p>Cleared overdue debt before penalty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Dashboard</a></li>
+                    <li><a href="#" class="footer-links">About Us</a></li>
+                    <li><a href="#" class="footer-links">Account</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Twitter</a></li>
+                    <li><a href="#" class="footer-links">Instagram</a></li>
+                    <li><a href="#" class="footer-links">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#" class="footer-links">Email</a></li>
+                    <li><a href="#" class="footer-links">Phone no.</a></li>
+                    <li><a href="#" class="footer-links">Inquiries</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Asset Pilot. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
