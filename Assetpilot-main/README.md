@@ -45,7 +45,7 @@ AssetPilot is a frontend-only web application that helps users manage borrowed a
 
 ## 👨‍💻 Contributors
 1. Piyush Singh
-2. Yash Takhtani
+2. Rucha Sinkar
 
 --
 
